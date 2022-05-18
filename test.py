@@ -7,11 +7,11 @@ import matplotlib.pyplot as plt
 import cv2
 from skimage.transform import resize
 
-train = tf.keras.models.load_model('/home/sahma61/Downloads/Proj_final/model_train')
+train = tf.keras.models.load_model('model_train')
 categories = ["Accident", "Non-Accident"]
 
-img_test = np.load("/home/sahma61/Downloads/Proj_final/test_features.npy")
-label_test = np.load("/home/sahma61/Downloads/Proj_final/test_labels.npy")
+img_test = np.load("test_features.npy")
+label_test = np.load("test_labels.npy")
 img_test = img_test / 255
 img_test = img_test.reshape(list(img_test.shape) + [1])
 print(img_test.shape)
